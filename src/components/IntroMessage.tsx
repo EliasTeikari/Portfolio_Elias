@@ -27,7 +27,7 @@ export default function IntroMessage() {
             {/* Background accent gradient */}
             <motion.div
                 style={{ y: backgroundY }}
-                className="absolute inset-0 opacity-30"
+                className="relative justify-content inset-0 opacity-30"
             >
                 <div
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]"
