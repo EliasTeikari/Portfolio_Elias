@@ -82,7 +82,7 @@ export default function Hero() {
                 style={{ opacity, scale, y }}
                 className="relative z-10 w-full"
             >
-                <div className="container mx-auto px-6 text-center">
+                <div className="justify-contentcontainer mx-auto px-6 text-center">
                     {/* Pre-title */}
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -154,7 +154,7 @@ export default function Hero() {
                     </motion.div>
 
                     {/* Hero image */}
-                    <div className="mt-24 md:mt-32 flex justify-center w-full px-6 md:px-12">
+                    <div className="mt-24 md:mt-32 justify-center flex w-full px-6 md:px-12">
                         <motion.div
                             initial={{ opacity: 0, y: 40 }}
                             animate={isLoaded ? { opacity: 1, y: 0 } : {}}
