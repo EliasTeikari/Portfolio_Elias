@@ -79,37 +79,36 @@ export default function Hero() {
           </motion.p>
 
           {/* Main Name */}
-          <div className="overflow-hidden mb-2">
-            <h1 className="text-[15vw] md:text-[12vw] lg:text-[10vw] font-bold leading-none tracking-tighter flex justify-center">
-              {nameLetters.map((letter, i) => (
-                <motion.span
-                  key={i}
-                  custom={i}
-                  initial="hidden"
-                  animate={isLoaded ? "visible" : "hidden"}
-                  variants={letterVariants}
-                  className="inline-block hover:text-accent transition-colors duration-300"
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </h1>
-          </div>
-
           <div className="overflow-hidden mb-8">
-            <h1 className="text-[12vw] md:text-[9vw] lg:text-[7vw] font-bold leading-none tracking-tighter flex justify-center text-accent">
-              {surnameLetters.map((letter, i) => (
-                <motion.span
-                  key={i}
-                  custom={i + nameLetters.length}
-                  initial="hidden"
-                  animate={isLoaded ? "visible" : "hidden"}
-                  variants={letterVariants}
-                  className="inline-block hover:text-foreground transition-colors duration-300"
-                >
-                  {letter}
-                </motion.span>
-              ))}
+            <h1 className="text-[10vw] md:text-[8vw] lg:text-[7vw] font-bold leading-none tracking-tighter flex flex-wrap justify-center gap-[0.2em]">
+              <span className="flex">
+                {nameLetters.map((letter, i) => (
+                  <motion.span
+                    key={i}
+                    custom={i}
+                    initial="hidden"
+                    animate={isLoaded ? "visible" : "hidden"}
+                    variants={letterVariants}
+                    className="inline-block hover:text-accent transition-colors duration-300"
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+              </span>
+              <span className="flex text-accent">
+                {surnameLetters.map((letter, i) => (
+                  <motion.span
+                    key={i}
+                    custom={i + nameLetters.length}
+                    initial="hidden"
+                    animate={isLoaded ? "visible" : "hidden"}
+                    variants={letterVariants}
+                    className="inline-block hover:text-foreground transition-colors duration-300"
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+              </span>
             </h1>
           </div>
 
@@ -132,22 +131,33 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          {/* Hero image placeholder - you can replace this with your actual image */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 1.5 }}
-            className="mt-16 md:mt-24 relative mx-auto max-w-md"
-          >
-            <div className="aspect-[3/4] rounded-2xl img-placeholder overflow-hidden border border-border">
-              <span className="text-muted text-sm">
-                Your portrait image<br />
-                (800 x 1000px recommended)
-              </span>
-            </div>
-            {/* Decorative elements */}
-            <div className="absolute -bottom-4 -right-4 w-full h-full border border-accent/30 rounded-2xl -z-10" />
-          </motion.div>
+          {/* Hero image */}
+          <div className="mt-24 md:mt-32 flex justify-center w-full px-6 md:px-12">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 1, delay: 1.5 }}
+              className="relative w-full max-w-5xl"
+            >
+              <div 
+                className="aspect-[16/9] relative"
+                style={{
+                  maskImage: "radial-gradient(ellipse at center, black 40%, transparent 100%)",
+                  WebkitMaskImage: "radial-gradient(ellipse at center, black 40%, transparent 100%)"
+                }}
+              >
+                <img
+                  src="/images/hero-bw.png"
+                  alt="Elias Teikari"
+                  className="object-cover w-full h-full opacity-90"
+                />
+              </div>
+              
+              {/* Vignette Overlay for extra seamless blending */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background opacity-40" />
+            </motion.div>
+          </div>
         </div>
       </motion.div>
 
