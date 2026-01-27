@@ -44,12 +44,23 @@ export default function Hero() {
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-transparent" />
-      
-      {/* Animated background circles */}
+      {/* Background Image Layer */}
+      <div className="absolute inset-0 -z-20">
+        <img
+          src="/images/hero-bg.png"
+          alt="Landscape Background"
+          className="object-cover w-full h-full"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60" />
+        
+        {/* Bottom gradient to blend with portrait's black fade */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent bottom-0 h-full" />
+      </div>
+
+      {/* Animated background circles - reduced opacity for subtlety */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full opacity-20"
+        className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full opacity-10"
         style={{
           background: "radial-gradient(circle, var(--accent) 0%, transparent 70%)",
           filter: "blur(100px)",
