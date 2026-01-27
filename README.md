@@ -1,3 +1,6 @@
+# My portfolio website
+<img width="1549" height="777" alt="Screenshot 2026-01-28 at 01 26 17" src="https://github.com/user-attachments/assets/1ad15cf3-3b49-40c3-abd0-7d08cf08a55a" />
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
