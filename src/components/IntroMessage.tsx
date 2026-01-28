@@ -38,8 +38,11 @@ export default function IntroMessage() {
                     }}
                 />
             </motion.div>
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="max-w-5xl mx-auto">
+            <div
+                className="w-full pr-6 relative z-10"
+                style={{ paddingLeft: '6rem' }}
+            >
+                <div className="max-w-5xl">
                     {/* Section label */}
                     <ScrollReveal delay={0}>
                         <div className="flex items-center gap-4 mb-12">
