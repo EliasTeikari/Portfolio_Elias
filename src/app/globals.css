@@ -9,6 +9,31 @@
     font-style: normal;
 }
 
+/* Supreme font for body text */
+@font-face {
+    font-family: 'Supreme';
+    src: url('/fonts/Supreme-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Supreme';
+    src: url('/fonts/Supreme-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Supreme';
+    src: url('/fonts/Supreme-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+}
+
 :root {
     --font-title: 'Panchang', system-ui, sans-serif;
     --background: #000000;
@@ -68,7 +93,7 @@ html.lenis body {
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-sans), system-ui, sans-serif;
+    font-family: 'Supreme', system-ui, sans-serif;
     overflow-x: hidden;
 }
 
