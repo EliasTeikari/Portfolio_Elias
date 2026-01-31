@@ -108,7 +108,7 @@ export default function Projects() {
 
                     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
                         <ScrollReveal delay={0.1}>
-                            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+                            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-title">
                                 Selected{' '}
                                 <span className="text-accent">Work</span>
                             </h2>

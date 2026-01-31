@@ -79,7 +79,7 @@ export default function Timeline() {
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.2}>
-                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-title">
                         My <span className="text-accent">Story</span>
                     </h2>
                 </ScrollReveal>

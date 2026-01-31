@@ -95,7 +95,7 @@ export default function Hero() {
 
                     {/* Main Name */}
                     <div className="overflow-hidden mb-8">
-                        <h1 className="text-[10vw] md:text-[8vw] lg:text-[7vw] font-bold leading-none tracking-tighter flex flex-wrap justify-center gap-[0.2em]">
+                        <h1 className="text-[10vw] md:text-[8vw] lg:text-[7vw] font-bold leading-none tracking-tighter font-title flex flex-wrap justify-center gap-[0.2em]">
                             <span className="flex">
                                 {nameLetters.map((letter, i) => (
                                     <motion.span

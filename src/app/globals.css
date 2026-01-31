@@ -1,6 +1,16 @@
 @import 'tailwindcss';
 
+/* Panchang font for titles */
+@font-face {
+    font-family: 'Panchang';
+    src: url('/fonts/Panchang-Variable.woff2') format('woff2');
+    font-weight: 200 800;
+    font-display: swap;
+    font-style: normal;
+}
+
 :root {
+    --font-title: 'Panchang', system-ui, sans-serif;
     --background: #000000;
     --foreground: #e5e5e5;
     --accent: #ffffff;
@@ -101,6 +111,11 @@ body {
 /* Accent text */
 .text-accent {
     color: var(--accent);
+}
+
+/* Title font */
+.font-title {
+    font-family: var(--font-title);
 }
 
 /* Glow effect */

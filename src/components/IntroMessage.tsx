@@ -52,7 +52,7 @@ export default function IntroMessage() {
 
                     {/* Main quote with word-by-word reveal */}
                     <div className="mb-16">
-                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight">
+                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight font-title">
                             {words.map((word, index) => (
                                 <ScrollReveal
                                     key={index}

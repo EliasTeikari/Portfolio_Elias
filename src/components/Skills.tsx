@@ -94,7 +94,7 @@ export default function Skills() {
 
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
                         <ScrollReveal delay={0.1}>
-                            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+                            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-title">
                                 What I{' '}
                                 <span className="text-accent">Bring</span>
                             </h2>
