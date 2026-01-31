@@ -257,3 +257,18 @@ section {
 .delay-800 {
     animation-delay: 0.8s;
 }
+
+/* IntroMessage centering */
+.intro-message-wrapper {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.intro-message-content {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+}
