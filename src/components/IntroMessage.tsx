@@ -110,6 +110,8 @@ export default function IntroMessage() {
                 />
             </div>
 
+            <div className="hero-transition-fade" />
+
             <div className="intro-message-wrapper">
                 <div className="intro-message-content">
                     {/* Section label */}
