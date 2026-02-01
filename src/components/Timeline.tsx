@@ -70,12 +70,6 @@ const timelineData: TimelineItem[] = [
         location: "Tallinn, Estonia",
         image: "/images/story/earcandy.jpg",
     },
-    {
-        year: "YYYY",
-        title: "Placeholder Title 3",
-        description: "Placeholder description for this story point.",
-        location: "Location",
-    },
 ];
 
 export default function Timeline() {
