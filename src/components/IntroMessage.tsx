@@ -106,7 +106,7 @@ export default function IntroMessage() {
                 <img
                     src="/images/intromessage-overlay-film_Afterlight.jpg"
                     alt="Film texture background"
-                    className="w-full h-full object-cover opacity-20"
+                    className="w-full h-full object-cover opacity-[0.24]"
                 />
             </div>
 
