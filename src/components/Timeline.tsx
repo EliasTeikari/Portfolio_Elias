@@ -63,7 +63,7 @@ const timelineData: TimelineItem[] = [
         image: "/images/story/lovable_hack.jpg",
     },
     {
-        year: "202545",
+        year: "2025",
         title: "Startup Launch Pad 'ruum'",
         description:
             "Pitched to hundreds in startup incubator (3-month program), weekly meetups with unicorn founders to learn from the best.",
