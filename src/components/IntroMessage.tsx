@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, ReactElement } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ScrollReveal from './ui/ScrollReveal';
 
@@ -14,9 +14,72 @@ export default function IntroMessage() {
 
     const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
 
-    // Split the quote into words for staggered animation
-    const quote = 'I build fast so my imposter syndrome can’t catch up.”';
-    const words = quote.split(' ');
+    // Main quote as a static string
+    const quote = "I build fast so my imposter syndrome can't catch up.";
+
+    // Helper function to process quote and wrap special words in spans
+    const processQuote = (text: string) => {
+        const specialWords = ['future', 'extraordinary', 'opportunity'];
+        const parts: (string | ReactElement)[] = [];
+        const matches: Array<{ index: number; length: number; word: string }> =
+            [];
+
+        // Find all matches of special words with their positions
+        for (let i = 0; i < specialWords.length; i++) {
+            const word = specialWords[i];
+            const regex = new RegExp(
+                `\\b${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`,
+                'gi',
+            );
+            let match;
+
+            while ((match = regex.exec(text)) !== null) {
+                matches.push({
+                    index: match.index,
+                    length: match[0].length,
+                    word: match[0],
+                });
+            }
+        }
+
+        // Sort matches by index to process in order
+        matches.sort((a, b) => a.index - b.index);
+
+        // Build parts array from matches
+        let lastIndex = 0;
+        for (let i = 0; i < matches.length; i++) {
+            const match = matches[i];
+
+            // Add text before the match
+            if (match.index > lastIndex) {
+                parts.push(text.substring(lastIndex, match.index));
+            }
+
+            // Add the matched word with styling
+            parts.push(
+                <span
+                    key={`special-${match.index}`}
+                    className="text-accent font-medium"
+                >
+                    {match.word}
+                </span>,
+            );
+
+            lastIndex = match.index + match.length;
+        }
+
+        // Add remaining text
+        if (lastIndex < text.length) {
+            parts.push(text.substring(lastIndex));
+        }
+
+        // If no special words were found, return the original text
+        if (parts.length === 0) {
+            return <>{text}</>;
+        }
+
+        return <>{parts}</>;
+    };
 
     return (
         <section
@@ -59,36 +122,13 @@ export default function IntroMessage() {
                         </div>
                     </ScrollReveal>
 
-                    {/* Main quote with word-by-word reveal */}
+                    {/* Main quote as static string */}
                     <div className="mb-16">
-                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight font-title">
-                            {words.map((word, index) => (
-                                <ScrollReveal
-                                    key={index}
-                                    delay={0.1 + index * 0.03}
-                                    direction="up"
-                                    distance={20}
-                                    className="inline-block"
-                                >
-                                    <span
-                                        className={
-                                            [
-                                                'future',
-                                                'extraordinary',
-                                                'opportunity',
-                                            ].includes(
-                                                word.replace(/[.,]/g, ''),
-                                            )
-                                                ? 'text-accent font-medium'
-                                                : ''
-                                        }
-                                    >
-                                        {word}
-                                    </span>
-                                    {index < words.length - 1 && ' '}
-                                </ScrollReveal>
-                            ))}
-                        </h2>
+                        <ScrollReveal delay={0.1} direction="up" distance={20}>
+                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight font-title">
+                                {processQuote(quote)}
+                            </h2>
+                        </ScrollReveal>
                     </div>
 
                     {/* Signature area */}
