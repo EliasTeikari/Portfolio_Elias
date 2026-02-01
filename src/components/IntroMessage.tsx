@@ -15,8 +15,7 @@ export default function IntroMessage() {
     const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
 
     // Split the quote into words for staggered animation
-    const quote =
-        'Building the future, one idea at a time. Every challenge is an opportunity to create something extraordinary.';
+    const quote = 'I build fast so my imposter syndrome can’t catch up.”';
     const words = quote.split(' ');
 
     return (
@@ -59,7 +58,7 @@ export default function IntroMessage() {
                                     delay={0.1 + index * 0.03}
                                     direction="up"
                                     distance={20}
-                                    className="inline-block mr-[0.3em]"
+                                    className="inline-block"
                                 >
                                     <span
                                         className={
@@ -76,6 +75,7 @@ export default function IntroMessage() {
                                     >
                                         {word}
                                     </span>
+                                    {index < words.length - 1 && ' '}
                                 </ScrollReveal>
                             ))}
                         </h2>

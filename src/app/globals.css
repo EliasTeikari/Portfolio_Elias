@@ -34,8 +34,18 @@
     font-style: italic;
 }
 
+/* Bespoke Stencil font for intro message */
+@font-face {
+    font-family: 'BespokeStencil';
+    src: url('/fonts/BespokeStencil-Variable.woff2') format('woff2');
+    font-weight: 200 800;
+    font-display: swap;
+    font-style: normal;
+}
+
 :root {
     --font-title: 'Panchang', system-ui, sans-serif;
+    --font-stencil: 'BespokeStencil', system-ui, sans-serif;
     --background: #000000;
     --foreground: #e5e5e5;
     --accent: #ffffff;
@@ -141,6 +151,11 @@ body {
 /* Title font */
 .font-title {
     font-family: var(--font-title);
+}
+
+/* Stencil font */
+.font-stencil {
+    font-family: var(--font-stencil);
 }
 
 /* Glow effect */
