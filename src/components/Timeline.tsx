@@ -55,16 +55,20 @@ const timelineData: TimelineItem[] = [
         image: "/images/story/expo-gen-e.jpg",
     },
     {
-        year: "YYYY",
-        title: "Placeholder Title 1",
-        description: "Placeholder description for this story point.",
-        location: "Location",
+        year: "2025",
+        title: "Project Lovable Hackathon",
+        description:
+            "My team was selected (20 out of 400 candidates) for the Project Lovable hackathon (thanks to Harry Stebbins, Kitty Mayo and Anton Osika)",
+        location: "Stockholm, Sweden",
+        image: "/images/story/lovable_hack.jpg",
     },
     {
-        year: "YYYY",
-        title: "Placeholder Title 2",
-        description: "Placeholder description for this story point.",
-        location: "Location",
+        year: "202545",
+        title: "Startup Launch Pad 'ruum'",
+        description:
+            "Pitched to hundreds in startup incubator (3-month program), weekly meetups with unicorn founders to learn from the best.",
+        location: "Tallinn, Estonia",
+        image: "/images/story/earcandy.jpg",
     },
     {
         year: "YYYY",
