@@ -67,8 +67,8 @@ export default function Timeline() {
             className="relative py-32 overflow-hidden"
             style={{ paddingLeft: '6rem' }}
         >
-            <div className="absolute inset-0 -z-20 bg-[url('/images/story/background-studio.JPG')] bg-cover bg-[position:15%_15%] opacity-25" />
-            <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/90 via-background/80 to-background/95" />
+            <div className="absolute inset-0 -z-20 bg-[url('/images/story/background-studio.JPG')] bg-cover bg-[position:15%_15%] opacity-45" />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/75 via-background/65 to-background/85" />
             {/* Section header */}
             <div className="container mx-auto px-6 mb-20">
                 <ScrollReveal>
