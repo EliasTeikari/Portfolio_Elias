@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import ScrollReveal from './ui/ScrollReveal';
-import ParallaxImage from './ui/ParallaxImage';
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import ScrollReveal from "./ui/ScrollReveal";
+import ParallaxImage from "./ui/ParallaxImage";
 
 interface TimelineItem {
     year: string;
@@ -15,39 +15,62 @@ interface TimelineItem {
 
 const timelineData: TimelineItem[] = [
     {
-        year: '2024',
-        title: 'Latest Venture',
+        year: "2022",
+        title: "Signed to a Label (17 y/o)",
         description:
-            'Launched a groundbreaking project that pushes the boundaries of innovation.',
-        location: 'Helsinki, Finland',
+            "Signed to FAAR MUSIC as a professional music producer & songwriter",
+        location: "Tallinn, Estonia",
+        image: "/images/story/studio-image.jpg",
     },
     {
-        year: '2023',
-        title: 'Major Milestone',
+        year: "2022-now",
+        title: "Worked with Hit-Makers",
         description:
-            'Achieved a significant breakthrough that changed the trajectory of my career.',
-        location: 'Global',
+            "Songwriters who have worked with Beyoncé, Ariana Grande, Rihanna, etc.",
+        location: "Global",
+        image: "/images/story/songwriting-camp-EDM.jpg",
     },
     {
-        year: '2022',
-        title: 'New Beginnings',
+        year: "2022-now",
+        title: "International Songwriting Camps",
         description:
-            'Started a new chapter with fresh ideas and renewed determination.',
-        location: 'Europe',
+            "Flown around the world (Norway, South-Korea, Stockholm) to participate in songwriting camps.",
+        location: "Global",
+        image: "/images/story/korea-studio.JPG",
     },
     {
-        year: '2021',
-        title: 'Foundation',
+        year: "2024",
+        title: "Best Student Company 2024",
         description:
-            'Laid the groundwork for future success with strategic planning and execution.',
-        location: 'Finland',
+            "Won Estonias Best Student Company of 2024, incl. 'Best Website Award', and more. We built icebaths.",
+        location: "Tallinn, Estonia",
+        image: "/images/story/best-student-company-estonia.jpg",
     },
     {
-        year: '2020',
-        title: 'The Journey Begins',
+        year: "2024",
+        title: "Represented Estonia in Europes Best Student Company 2024",
         description:
-            'Took the first steps into entrepreneurship, embracing uncertainty with excitement.',
-        location: 'Helsinki',
+            "Represented Estonia in Gen-E 2024 as Estonias Best Student Company in Sicily, Italy.",
+        location: "Sicily, Italy",
+        image: "/images/story/expo-gen-e.jpg",
+    },
+    {
+        year: "YYYY",
+        title: "Placeholder Title 1",
+        description: "Placeholder description for this story point.",
+        location: "Location",
+    },
+    {
+        year: "YYYY",
+        title: "Placeholder Title 2",
+        description: "Placeholder description for this story point.",
+        location: "Location",
+    },
+    {
+        year: "YYYY",
+        title: "Placeholder Title 3",
+        description: "Placeholder description for this story point.",
+        location: "Location",
     },
 ];
 
@@ -56,16 +79,16 @@ export default function Timeline() {
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ['start end', 'end start'],
+        offset: ["start end", "end start"],
     });
 
-    const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+    const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
     return (
         <section
             ref={containerRef}
             className="relative py-32 overflow-hidden"
-            style={{ paddingLeft: '6rem' }}
+            style={{ paddingLeft: "6rem" }}
         >
             <div className="absolute inset-0 -z-20 bg-[url('/images/story/background-studio.JPG')] bg-cover bg-[position:15%_15%] opacity-45" />
             <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/75 via-background/65 to-background/85" />
@@ -124,14 +147,14 @@ export default function Timeline() {
                 <ScrollReveal>
                     <blockquote className="text-center max-w-3xl mx-auto">
                         <p className="text-2xl md:text-3xl lg:text-4xl font-light italic text-muted">
-                            "It doesn't matter where you{' '}
+                            "It doesn't matter where you{" "}
                             <span className="text-accent not-italic font-medium">
                                 start
                             </span>
-                            , it's how you{' '}
+                            , it's how you{" "}
                             <span className="text-accent not-italic font-medium">
                                 progress
-                            </span>{' '}
+                            </span>{" "}
                             from there."
                         </p>
                     </blockquote>
@@ -153,7 +176,7 @@ function TimelineCard({
     return (
         <div
             className={`relative flex flex-col md:flex-row items-start md:items-center gap-8 ${
-                isEven ? 'md:flex-row' : 'md:flex-row-reverse'
+                isEven ? "md:flex-row" : "md:flex-row-reverse"
             }`}
         >
             {/* Timeline dot */}
@@ -163,16 +186,16 @@ function TimelineCard({
 
             {/* Content side */}
             <div
-                className={`w-full md:w-1/2 pl-8 md:pl-0 ${isEven ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}
+                className={`w-full md:w-1/2 pl-8 md:pl-0 ${isEven ? "md:pr-16 md:text-right" : "md:pl-16"}`}
             >
                 <ScrollReveal
                     delay={0.1 * index}
-                    direction={isEven ? 'right' : 'left'}
+                    direction={isEven ? "right" : "left"}
                 >
                     <div className="space-y-4">
                         {/* Year badge */}
                         <div
-                            className={`flex items-center gap-3 ${isEven ? 'md:justify-end' : ''}`}
+                            className={`flex items-center gap-3 ${isEven ? "md:justify-end" : ""}`}
                         >
                             <span className="text-accent font-mono text-sm tracking-wider">
                                 {item.location}
@@ -197,17 +220,17 @@ function TimelineCard({
 
             {/* Image side */}
             <div
-                className={`w-full md:w-1/2 pl-8 md:pl-0 ${isEven ? 'md:pl-16' : 'md:pr-16'}`}
+                className={`w-full md:w-1/2 pl-8 md:pl-0 ${isEven ? "md:pl-16" : "md:pr-16"}`}
             >
                 <ScrollReveal
                     delay={0.2 + 0.1 * index}
-                    direction={isEven ? 'left' : 'right'}
+                    direction={isEven ? "left" : "right"}
                 >
                     <div className="relative group">
                         <ParallaxImage
-                            src=""
+                            src={item.image ?? ""}
                             alt={item.title}
-                            placeholder={true}
+                            placeholder={!item.image}
                             placeholderText={`Image for ${item.year}\n(600 x 400px)`}
                             className="aspect-[3/2] rounded-xl"
                         />
