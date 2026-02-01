@@ -37,6 +37,16 @@ export default function IntroMessage() {
                     }}
                 />
             </motion.div>
+
+            {/* Background film texture image */}
+            <div className="absolute inset-0 z-10 pointer-events-none">
+                <img
+                    src="/images/intromessage-overlay-film_Afterlight.jpg"
+                    alt="Film texture background"
+                    className="w-full h-full object-cover opacity-20"
+                />
+            </div>
+
             <div className="intro-message-wrapper">
                 <div className="intro-message-content">
                     {/* Section label */}
