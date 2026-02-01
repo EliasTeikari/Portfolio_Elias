@@ -89,7 +89,7 @@ export default function IntroMessage() {
             {/* Background accent gradient */}
             <motion.div
                 style={{ y: backgroundY }}
-                className="relative justify-content inset-0 opacity-30"
+                className="relative justify-content inset-0 opacity-30 intro-fade-overlay"
             >
                 <div
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]"
@@ -102,7 +102,7 @@ export default function IntroMessage() {
             </motion.div>
 
             {/* Background film texture image */}
-            <div className="absolute inset-0 z-10 pointer-events-none">
+            <div className="absolute inset-0 z-10 pointer-events-none intro-fade-overlay">
                 <img
                     src="/images/intromessage-overlay-film_Afterlight.jpg"
                     alt="Film texture background"

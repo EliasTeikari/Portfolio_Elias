@@ -328,3 +328,37 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+
+.hero-transition-fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 18vh;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        var(--background) 80%
+    );
+}
+
+.intro-fade-overlay {
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 35%,
+        black 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 35%,
+        black 100%
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
