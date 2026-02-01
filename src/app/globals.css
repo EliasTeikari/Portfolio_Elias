@@ -334,13 +334,14 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 18vh;
-    z-index: 1;
+    height: 26vh;
+    z-index: 15;
     pointer-events: none;
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0),
-        var(--background) 80%
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.6) 55%,
+        var(--background) 100%
     );
 }
 
