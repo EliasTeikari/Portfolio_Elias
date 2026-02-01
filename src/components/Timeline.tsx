@@ -64,9 +64,11 @@ export default function Timeline() {
     return (
         <section
             ref={containerRef}
-            className="relative py-32 verflow-hidden"
+            className="relative py-32 overflow-hidden"
             style={{ paddingLeft: '6rem' }}
         >
+            <div className="absolute inset-0 -z-20 bg-[url('/images/story/background-studio.JPG')] bg-cover bg-center opacity-25" />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/90 via-background/80 to-background/95" />
             {/* Section header */}
             <div className="container mx-auto px-6 mb-20">
                 <ScrollReveal>
