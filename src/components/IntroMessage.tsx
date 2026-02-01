@@ -125,7 +125,7 @@ export default function IntroMessage() {
                     {/* Main quote as static string */}
                     <div className="mb-16">
                         <ScrollReveal delay={0.1} direction="up" distance={20}>
-                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight font-title">
+                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium leading-tight font-title">
                                 {processQuote(quote)}
                             </h2>
                         </ScrollReveal>
