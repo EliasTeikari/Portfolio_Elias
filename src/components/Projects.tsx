@@ -124,7 +124,7 @@ export default function Projects() {
                 <motion.div
                     ref={scrollContainerRef}
                     style={{ x }}
-                    className="flex gap-8 pl-6 pr-[50vw]"
+                    className="flex gap-8 pl-6 pr-6 md:pr-12 lg:pr-16"
                 >
                     {projectsData.map((project, index) => (
                         <ProjectCard
