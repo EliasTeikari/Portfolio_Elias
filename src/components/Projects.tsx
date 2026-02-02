@@ -1,14 +1,15 @@
-'use client';
+"use client";
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from "react";
 import {
     motion,
     useScroll,
     useTransform,
     useMotionValue,
     useSpring,
-} from 'framer-motion';
-import ScrollReveal from './ui/ScrollReveal';
+} from "framer-motion";
+import Image from "next/image";
+import ScrollReveal from "./ui/ScrollReveal";
 
 interface Project {
     id: number;
@@ -16,54 +17,50 @@ interface Project {
     category: string;
     description: string;
     year: string;
+    image?: string;
     link?: string;
 }
 
 const projectsData: Project[] = [
     {
         id: 1,
-        title: 'Project Alpha',
-        category: 'Tech Startup',
+        title: "earcandy",
+        category: "Tech Startup",
         description:
-            'A revolutionary platform that transforms how people connect and collaborate.',
-        year: '2024',
-        link: '#',
+            "An AI music tool catered for music producers and songwriters that helped me in my workflow.",
+        year: "2024",
+        image: "/images/selected_work/earcandy.jpg",
+        link: "#",
     },
     {
         id: 2,
-        title: 'Project Beta',
-        category: 'SaaS Product',
+        title: "PowerPlan",
+        category: "SaaS Product",
         description:
-            'Streamlining workflows and boosting productivity for teams worldwide.',
-        year: '2023',
-        link: '#',
+            "I used to go to the gym with a Google spreadsheet, which was a terrible UX for me, so I decided to build something better.",
+        year: "2023",
+        image: "/images/selected_work/powerplan.jpg",
+        link: "#",
     },
     {
         id: 3,
-        title: 'Project Gamma',
-        category: 'Mobile App',
+        title: "LiftSense",
+        category: "AI Fitness",
         description:
-            'Bringing innovation to your fingertips with cutting-edge mobile technology.',
-        year: '2023',
-        link: '#',
+            "An AI-powered form corrector that we built at the Project Lovable Hackathon.",
+        year: "2023",
+        image: "/images/selected_work/liftsense.jpg",
+        link: "#",
     },
     {
         id: 4,
-        title: 'Project Delta',
-        category: 'E-Commerce',
+        title: "earcandy landing page",
+        category: "Product Landing",
         description:
-            'Reimagining online shopping with personalized experiences.',
-        year: '2022',
-        link: '#',
-    },
-    {
-        id: 5,
-        title: 'Project Epsilon',
-        category: 'AI/ML',
-        description:
-            'Harnessing the power of artificial intelligence for real-world solutions.',
-        year: '2022',
-        link: '#',
+            "Landing page where our app earcandy can be downloaded and authentication handled with payments.",
+        year: "2022",
+        image: "/images/selected_work/earcandy_landing.jpg",
+        link: "#",
     },
 ];
 
@@ -74,7 +71,7 @@ export default function Projects() {
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ['start start', 'end end'],
+        offset: ["start start", "end end"],
     });
 
     useEffect(() => {
@@ -91,7 +88,7 @@ export default function Projects() {
         <section
             ref={containerRef}
             className="relative"
-            style={{ height: '300vh' }}
+            style={{ height: "300vh" }}
         >
             {/* Sticky container for horizontal scroll */}
             <div className="sticky top-0 h-screen overflow-hidden flex flex-col justify-center">
@@ -109,7 +106,7 @@ export default function Projects() {
                     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
                         <ScrollReveal delay={0.1}>
                             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-title">
-                                Selected{' '}
+                                Selected{" "}
                                 <span className="text-accent">Work</span>
                             </h2>
                         </ScrollReveal>
@@ -149,7 +146,7 @@ export default function Projects() {
                                     width: useTransform(
                                         scrollYProgress,
                                         [0, 1],
-                                        ['0%', '100%'],
+                                        ["0%", "100%"],
                                     ),
                                 }}
                             />
@@ -199,18 +196,33 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             style={{
                 rotateX,
                 rotateY,
-                transformStyle: 'preserve-3d',
+                transformStyle: "preserve-3d",
             }}
             className="group relative w-[400px] md:w-[500px] lg:w-[600px] flex-shrink-0"
         >
             <div className="relative bg-card rounded-2xl overflow-hidden border border-border group-hover:border-accent/50 transition-colors duration-500">
                 {/* Project image placeholder */}
-                <div className="aspect-[4/3] img-placeholder relative overflow-hidden">
-                    <span className="text-muted text-sm">
-                        Project Image
-                        <br />
-                        (800 x 600px)
-                    </span>
+                <div
+                    className={`aspect-[4/3] relative overflow-hidden ${
+                        project.image ? "" : "img-placeholder"
+                    }`}
+                >
+                    {project.image ? (
+                        <Image
+                            src={project.image}
+                            alt={`${project.title} preview`}
+                            fill
+                            priority={index === 0}
+                            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 60vw, 600px"
+                            className="object-cover"
+                        />
+                    ) : (
+                        <span className="text-muted text-sm">
+                            Project Image
+                            <br />
+                            (800 x 600px)
+                        </span>
+                    )}
 
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -264,7 +276,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
                 {/* Project number */}
                 <div className="absolute top-6 right-6 text-6xl font-bold text-foreground/5 group-hover:text-accent/10 transition-colors duration-500">
-                    {String(index + 1).padStart(2, '0')}
+                    {String(index + 1).padStart(2, "0")}
                 </div>
             </div>
 
