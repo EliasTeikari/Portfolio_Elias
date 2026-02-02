@@ -91,7 +91,7 @@ export default function Timeline() {
             <div className="absolute inset-0 -z-20 bg-[url('/images/story/background-studio.JPG')] bg-cover bg-[position:15%_15%] opacity-45" />
             <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/75 via-background/65 to-background/85" />
             {/* Section header */}
-            <div className="container mx-auto px-6 mb-20">
+            <div className="story-section-container mb-20">
                 <ScrollReveal>
                     <div className="flex items-center gap-4 mb-6">
                         <div className="w-12 h-px bg-accent" />
@@ -116,7 +116,7 @@ export default function Timeline() {
             </div>
 
             {/* Timeline content */}
-            <div className="container mx-auto px-6">
+            <div className="story-section-container">
                 <div className="relative">
                     {/* Vertical timeline line */}
                     <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2">
@@ -141,7 +141,7 @@ export default function Timeline() {
             </div>
 
             {/* Bottom quote */}
-            <div className="container mx-auto px-6 mt-32">
+            <div className="story-section-container mt-32">
                 <ScrollReveal>
                     <blockquote className="text-center max-w-3xl mx-auto">
                         <p className="text-2xl md:text-3xl lg:text-4xl font-light italic text-muted">

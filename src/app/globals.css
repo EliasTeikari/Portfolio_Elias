@@ -329,6 +329,17 @@ section {
     margin-right: auto;
 }
 
+/* Story section centering */
+.story-section-container {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+}
+
 .hero-transition-fade {
     position: absolute;
     left: 0;
