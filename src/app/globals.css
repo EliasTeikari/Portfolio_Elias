@@ -332,12 +332,41 @@ section {
 /* Story section centering */
 .story-section-container {
     width: 100%;
-    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     position: relative;
+}
+
+@media (min-width: 640px) {
+    .story-section-container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .story-section-container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .story-section-container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .story-section-container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .story-section-container {
+        max-width: 1536px;
+    }
 }
 
 .hero-transition-fade {
