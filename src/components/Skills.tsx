@@ -43,6 +43,35 @@ const skills: Skill[] = [
     },
 ];
 
+const techStack = [
+    { name: 'TypeScript', className: 'bg-sky-600/80 text-white' },
+    { name: 'React', className: 'bg-cyan-500/80 text-slate-900' },
+    { name: 'Tailwind CSS', className: 'bg-teal-500/80 text-slate-900' },
+    { name: 'Node.js', className: 'bg-emerald-600/80 text-white' },
+    { name: 'MongoDB', className: 'bg-emerald-700/80 text-white' },
+    { name: 'Vite', className: 'bg-purple-500/80 text-white' },
+    { name: 'Python', className: 'bg-yellow-400/90 text-slate-900' },
+    { name: 'Java', className: 'bg-orange-500/80 text-white' },
+    { name: 'Bash', className: 'bg-slate-700/80 text-white' },
+    { name: 'Git', className: 'bg-orange-600/80 text-white' },
+    { name: 'PostgreSQL', className: 'bg-blue-600/80 text-white' },
+    { name: 'HTML5', className: 'bg-orange-500/80 text-white' },
+    { name: 'CSS3', className: 'bg-blue-500/80 text-white' },
+    { name: 'Docker', className: 'bg-sky-500/80 text-white' },
+    { name: 'AWS', className: 'bg-amber-500/90 text-slate-900' },
+    { name: 'Bootstrap', className: 'bg-violet-600/80 text-white' },
+    { name: 'JavaScript', className: 'bg-yellow-400/90 text-slate-900' },
+    { name: 'Joi', className: 'bg-indigo-500/80 text-white' },
+    { name: 'Next.js', className: 'bg-zinc-800/90 text-white' },
+    { name: 'Bun', className: 'bg-amber-600/80 text-white' },
+    { name: 'Linux', className: 'bg-yellow-500/90 text-slate-900' },
+    { name: 'Vercel', className: 'bg-foreground text-background' },
+    { name: 'Railway', className: 'bg-zinc-900 text-white' },
+    { name: 'Render', className: 'bg-emerald-500/80 text-slate-900' },
+    { name: 'JWT', className: 'bg-rose-600/80 text-white' },
+    { name: 'bcrypt', className: 'bg-indigo-600/80 text-white' },
+];
+
 const marqueeText =
     'ENTREPRENEUR • BUILDER • INNOVATOR • LEADER • CREATOR • VISIONARY • ';
 
@@ -118,6 +147,28 @@ export default function Skills() {
                             index={index}
                         />
                     ))}
+                </div>
+
+                {/* Tech stack */}
+                <div className="mt-16 bg-card border border-border rounded-2xl p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                        <span className="text-2xl">🛠️</span>
+                        <h3 className="text-2xl font-bold">Tech Stack</h3>
+                    </div>
+                    <p className="text-muted mb-6 max-w-2xl">
+                        The technologies I&apos;ve built with across frontend,
+                        backend, DevOps, and deployment.
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                        {techStack.map((tech) => (
+                            <span
+                                key={tech.name}
+                                className={`inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold tracking-[0.2em] uppercase border border-white/10 ${tech.className}`}
+                            >
+                                {tech.name}
+                            </span>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Bottom CTA */}
