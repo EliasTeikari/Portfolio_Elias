@@ -26,7 +26,7 @@ const contactLinks = [
 
 export default function ContactFooter() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-16 overflow-hidden contact-footer-section">
       <div className="story-section-container relative z-10">
         <div className="mb-12">
           <ScrollReveal>
