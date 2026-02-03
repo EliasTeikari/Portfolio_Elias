@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 import ScrollReveal from './ui/ScrollReveal';
 
 interface SocialLink {
@@ -55,12 +56,36 @@ const socialLinks: SocialLink[] = [
 ];
 
 const socialImages = [
-    { id: 1, alt: 'Social moment 1' },
-    { id: 2, alt: 'Social moment 2' },
-    { id: 3, alt: 'Social moment 3' },
-    { id: 4, alt: 'Social moment 4' },
-    { id: 5, alt: 'Social moment 5' },
-    { id: 6, alt: 'Social moment 6' },
+    {
+        id: 1,
+        src: '/images/social/on-stage.jpg',
+        alt: 'Speaking on stage',
+    },
+    {
+        id: 2,
+        src: '/images/social/pitch.jpg',
+        alt: 'Pitching a product',
+    },
+    {
+        id: 3,
+        src: '/images/social/anton-osika.jpg',
+        alt: 'With Anton Osika',
+    },
+    {
+        id: 4,
+        src: '/images/social/asking-question.jpg',
+        alt: 'Asking a question',
+    },
+    {
+        id: 5,
+        src: '/images/social/harry.jpg',
+        alt: 'With Harry',
+    },
+    {
+        id: 6,
+        src: '/images/social/Screenshot%202026-02-03%20at%2016.03.25.jpg',
+        alt: 'Social highlight',
+    },
 ];
 
 export default function Social() {
@@ -125,17 +150,13 @@ export default function Social() {
                                         : 'aspect-square'
                                 }`}
                             >
-                                <div className="w-full h-full img-placeholder">
-                                    <span className="text-xs text-muted text-center">
-                                        Social Image {image.id}
-                                        <br />
-                                        (400 x{' '}
-                                        {index === 0 || index === 3
-                                            ? '533'
-                                            : '400'}
-                                        px)
-                                    </span>
-                                </div>
+                                <Image
+                                    src={image.src}
+                                    alt={image.alt}
+                                    fill
+                                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
+                                    className="object-cover"
+                                />
                                 {/* Hover overlay */}
                                 <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             </motion.div>
