@@ -110,7 +110,7 @@ export default function Social() {
 
             <div className="story-section-container relative z-10">
                 {/* Section header */}
-                <div className="mb-16">
+                <div className="mb-20">
                     <ScrollReveal>
                         <div className="flex items-center gap-4 mb-6">
                             <div className="w-12 h-px bg-accent" />
