@@ -85,8 +85,7 @@ export default function Timeline() {
     return (
         <section
             ref={containerRef}
-            className="relative py-32 overflow-hidden"
-            style={{ paddingLeft: "6rem" }}
+            className="relative py-32 overflow-hidden pl-4 sm:pl-6 md:pl-24"
         >
             <div className="absolute inset-0 -z-20 bg-[url('/images/story/background-studio.JPG')] bg-cover bg-[position:15%_15%] opacity-45" />
             <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/75 via-background/65 to-background/85" />
@@ -119,7 +118,7 @@ export default function Timeline() {
             <div className="story-section-container">
                 <div className="relative">
                     {/* Vertical timeline line */}
-                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2">
+                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2 z-10 pointer-events-none">
                         <motion.div
                             className="w-full bg-accent origin-top"
                             style={{ height: lineHeight }}
@@ -178,7 +177,7 @@ function TimelineCard({
             }`}
         >
             {/* Timeline dot */}
-            <div className="absolute left-0 md:left-1/2 w-4 h-4 -translate-x-1/2 md:-translate-x-1/2 bg-background border-2 border-accent rounded-full z-10">
+            <div className="absolute left-0 md:left-1/2 w-4 h-4 -translate-x-1/2 md:-translate-x-1/2 bg-background border-2 border-accent rounded-full z-20">
                 <div className="absolute inset-1 bg-accent rounded-full animate-pulse" />
             </div>
 
