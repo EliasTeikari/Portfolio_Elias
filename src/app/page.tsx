@@ -25,7 +25,7 @@ export default function Home() {
         <Projects />
       </div>
 
-      {/* Skills & Expertise */}
+      {/* Marquee Background */}
       <Skills />
 
       {/* Social & Connect */}
