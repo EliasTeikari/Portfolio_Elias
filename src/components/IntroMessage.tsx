@@ -133,24 +133,16 @@ export default function IntroMessage() {
                         </ScrollReveal>
                     </div>
 
-                    {/* Signature area */}
+                    {/* Author details */}
                     <ScrollReveal delay={0.8}>
                         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-                            {/* Signature placeholder */}
-                            <div className="flex items-center gap-6">
-                                <div className="w-32 h-16 img-placeholder rounded-lg flex items-center justify-center">
-                                    <span className="text-xs text-muted">
-                                        Signature
-                                    </span>
-                                </div>
-                                <div>
-                                    <p className="text-foreground font-medium">
-                                        Elias Teikari
-                                    </p>
-                                    <p className="text-muted text-sm">
-                                        Founder & Builder
-                                    </p>
-                                </div>
+                            <div>
+                                <p className="text-foreground font-medium">
+                                    Elias Teikari
+                                </p>
+                                <p className="text-muted text-sm">
+                                    Founder & Builder
+                                </p>
                             </div>
 
                             {/* Stats or highlights */}

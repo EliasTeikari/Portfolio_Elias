@@ -67,15 +67,8 @@ export default function Footer() {
             </h2>
           </div>
 
-          {/* Signature placeholder */}
-          <ScrollReveal delay={0.4}>
-            <div className="w-48 h-24 img-placeholder rounded-lg mb-12">
-              <span className="text-xs text-muted">Your Signature</span>
-            </div>
-          </ScrollReveal>
-
           {/* CTA Button */}
-          <ScrollReveal delay={0.5}>
+          <ScrollReveal delay={0.4}>
             <motion.a
               href="mailto:hello@eliasteikari.com"
               whileHover={{ scale: 1.05 }}
