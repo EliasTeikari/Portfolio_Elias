@@ -95,13 +95,19 @@ export default function Home() {
                     (&lt;1% acceptance rate)
                 </li>
                 <li>
-                    Won the NullHack Hackathon, powered by Anthropic and
-                    Lovable. Got flown out to San Francisco as the prize
+                    Won the{" "}
+                    <a href="https://lnkd.in/p/e_8ADQUQ">NullHack Hackathon</a>,
+                    powered by Anthropic and Lovable. Got flown out to San
+                    Francisco as the prize
                 </li>
                 <li>
-                    Won the President&apos;s EdTech Hackathon (6000€ prize), the
-                    project is still operating as a non-profit with a team of 10
-                    people.
+                    Won the{" "}
+                    <a href="https://hakk.tihupe.ee/en/">
+                        President&apos;s EdTech Hackathon
+                    </a>{" "}
+                    (6000€ prize), the project is still operating as a{" "}
+                    <a href="https://www.punanepastakas.ee/">non-profit</a>{" "}
+                    with a team of 10 people.
                 </li>
                 <li>
                     OpenAI featured the project in{" "}
@@ -130,7 +136,7 @@ export default function Home() {
                     <a href="https://huggingface.co/datasets/Rapidata/svg-benchmark">
                         Hugging Face dataset
                     </a>
-                    ), my Hugging Face dataset has over 12,000 downloads
+                    ), my dataset has over 12,000 downloads
                 </li>
             </ul>
 
