@@ -12,8 +12,7 @@ export default function Home() {
             />
             <p>
                 Hello hello! I&apos;m an Estonian 20 year old hustler and nice
-                guy. AI Engineer at{" "}
-                <a href="https://rapidata.ai">Rapidata.ai</a>, based in Tallinn.
+                guy.
             </p>
 
             <h2>TLDR</h2>
