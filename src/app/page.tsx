@@ -20,7 +20,7 @@ export default function Home() {
                 <li>Produced a song for Škoda at 16 years old</li>
                 <li>OpenAI featured my hackathon project in an article</li>
                 <li>
-                    Made an SVG benchmark for AI models, collected 2.8 million
+                    Made an SVG benchmark for AI models, collected 3.2 million
                     human opinions
                 </li>
                 <li>People find me useful for my taste.</li>
@@ -43,9 +43,18 @@ export default function Home() {
                     for Beyoncé, Ariana Grande and Justin Bieber.
                 </li>
                 <li>
+                    Produced a song that is going to be released by one of the
+                    biggest K-pop bands, TWS (over 500,000,000 streams total)
+                </li>
+                <li>
                     Flown around the world to participate in 12 international
                     songwriting/producing camps in South Korea, Norway,
                     Lithuania, Sweden and Estonia.
+                </li>
+                <li>
+                    <a href="https://www.dropbox.com/scl/fi/u1kpvit8dxqyujqytt9r9/TakeItSlow_CarmelEliasKillingEmily.wav?rlkey=834b1k9snw2mlhpdocegh0yom&st=28cnag2a&dl=0">
+                        My favorite song I&apos;ve produced
+                    </a>
                 </li>
             </ul>
 
@@ -78,12 +87,13 @@ export default function Home() {
                     to produce music in a DAW
                 </li>
                 <li>
-                    Pitched weekly to unicorn founders and audiences at monthly
-                    events
+                    Pitched weekly to a room of 30, including unicorn founders,
+                    and monthly to crowds of 300+ VCs and founders
                 </li>
                 <li>
                     Participated in Estonia&apos;s biggest startup launchpad{" "}
-                    <a href="https://www.ruumtallinn.com/">ruum</a>
+                    <a href="https://www.ruumtallinn.com/">ruum</a> (backed by
+                    founders of Wise, Bolt and Skype)
                 </li>
             </ul>
 
@@ -132,11 +142,11 @@ export default function Home() {
                     to become the main benchmark
                 </li>
                 <li>
-                    Collected over 2,800,000 human opinions on SVGs (
+                    Collected over 3,200,000 human opinions on SVGs (
                     <a href="https://huggingface.co/datasets/Rapidata/svg-benchmark">
                         Hugging Face dataset
                     </a>
-                    ), my dataset has over 12,000 downloads
+                    ), my dataset has over 14,000 downloads
                 </li>
             </ul>
 
