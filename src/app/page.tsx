@@ -12,7 +12,8 @@ export default function Home() {
             />
             <p>
                 Hello hello! I&apos;m an Estonian 20 year old hustler and nice
-                guy.
+                guy. AI Engineer at{" "}
+                <a href="https://rapidata.ai">Rapidata.ai</a>, based in Tallinn.
             </p>
 
             <h2>TLDR</h2>
@@ -20,8 +21,12 @@ export default function Home() {
                 <li>Produced a song for Škoda at 16 years old</li>
                 <li>OpenAI featured my hackathon project in an article</li>
                 <li>
-                    Made an SVG benchmark for AI models, collected 2.8 million
-                    human opinions
+                    Made an SVG benchmark for AI models, collected 3.2 million
+                    human annotations, 14,000+ downloads on Hugging Face
+                </li>
+                <li>
+                    Cut the p95 latency of a production API 6.5× while traffic
+                    went up about 60%
                 </li>
                 <li>People find me useful for my taste.</li>
             </ul>
@@ -29,7 +34,9 @@ export default function Home() {
             <h2>It all started with Music</h2>
             <ul>
                 <li>
-                    Produced music for big clients, like Škoda at 16 years old
+                    Produced music for big clients, like{" "}
+                    <a href="https://www.skoda-auto.com/">Škoda</a> at 16 years
+                    old
                 </li>
                 <li>
                     I signed to a record label (
@@ -37,6 +44,10 @@ export default function Home() {
                         FAAR Music
                     </a>
                     ) at 17 years old, proof of my immaculate taste.
+                </li>
+                <li>
+                    Produced a song that is going to be released by one of the
+                    biggest K-pop bands, TWS (over 500,000,000 streams total)
                 </li>
                 <li>
                     Produced and written with songwriters, who have made hits
@@ -47,6 +58,11 @@ export default function Home() {
                     songwriting/producing camps in South Korea, Norway,
                     Lithuania, Sweden and Estonia.
                 </li>
+                <li>
+                    <a href="https://www.dropbox.com/scl/fi/u1kpvit8dxqyujqytt9r9/TakeItSlow_CarmelEliasKillingEmily.wav?rlkey=834b1k9snw2mlhpdocegh0yom&st=28cnag2a&dl=0">
+                        My favorite song I&apos;ve made
+                    </a>
+                </li>
             </ul>
 
             <h2>Cool first company I built in 11th grade</h2>
@@ -54,7 +70,15 @@ export default function Home() {
                 <li>
                     Best Student Company in Estonia 2024 &ldquo;
                     <a href="https://pof.ja.ee/pof2024tulemused">Nullivann</a>
-                    &rdquo;
+                    &rdquo; (
+                    <a href="https://www.instagram.com/nullivann/?hl=en">
+                        Instagram
+                    </a>
+                    )
+                </li>
+                <li>
+                    We built ice baths by hand and sold them through a website I
+                    built
                 </li>
                 <li>
                     Represented Estonia in the Best Student Company in Europe
@@ -62,9 +86,8 @@ export default function Home() {
                     <a href="https://2024.gen-e.eu/">Gen-E 2024</a>
                 </li>
                 <li>
-                    Programmed a website for my student company that went on to
-                    win the E-Commerce Union&apos;s &ldquo;Best Website
-                    Award&rdquo; (1000 EUR prize)
+                    The website went on to win the E-Commerce Union&apos;s
+                    &ldquo;Best Website Award&rdquo; (1000 EUR prize)
                 </li>
             </ul>
 
@@ -74,16 +97,26 @@ export default function Home() {
             </h2>
             <ul>
                 <li>
-                    AI music tool for music producers, first AI-first workflow
-                    to produce music in a DAW
+                    Built and led a team of 3 to ship one of the first AI music
+                    production workflows in a DAW
                 </li>
                 <li>
-                    Pitched weekly to unicorn founders and audiences at monthly
-                    events
+                    Used by professional songwriters, including writers with
+                    credits for Beyoncé, Ariana Grande and Justin Bieber, in
+                    their songwriting camps. They asked to pay for it.
                 </li>
                 <li>
-                    Participated in Estonia&apos;s biggest startup launchpad{" "}
-                    <a href="https://www.ruumtallinn.com/">ruum</a>
+                    Accepted into Estonia&apos;s biggest startup launchpad{" "}
+                    <a href="https://www.ruumtallinn.com/">ruum</a> (backed by
+                    founders of Wise, Bolt and Skype)
+                </li>
+                <li>
+                    Pitched it weekly to a room of 30, including unicorn
+                    founders, and monthly to crowds of 300+ VCs and founders
+                </li>
+                <li>
+                    Shut down when the top AI music model providers would not
+                    give API access
                 </li>
             </ul>
 
@@ -101,13 +134,23 @@ export default function Home() {
                     Francisco as the prize
                 </li>
                 <li>
-                    Won the{" "}
+                    Led a team of five to first place at the{" "}
                     <a href="https://hakk.tihupe.ee/en/">
                         President&apos;s EdTech Hackathon
                     </a>{" "}
-                    (6000€ prize), the project is still operating as a{" "}
+                    (6000€ prize), announced by the President of Estonia
+                </li>
+                <li>
+                    Our maths teacher spends 378 hours a year grading. We wanted
+                    to get that under 100, so we kept the teacher&apos;s grading
+                    workflow the same and added as much AI assistance as
+                    possible without introducing complexity.
+                </li>
+                <li>
+                    The project (RedPen) is still operating as a{" "}
                     <a href="https://www.punanepastakas.ee/">non-profit</a>{" "}
-                    with a team of 10 people.
+                    with a team of 10 people, giving Estonian teachers their
+                    time back. I handed it over when I joined Rapidata.
                 </li>
                 <li>
                     OpenAI featured the project in{" "}
@@ -121,27 +164,66 @@ export default function Home() {
                 </li>
             </ul>
 
-            <h2>Coolest company Rapidata.ai</h2>
+            <h2>Coolest company Rapidata.ai (where I work now)</h2>
             <ul>
                 <li>
                     The best access to human annotations for frontier AI model
                     providers
                 </li>
                 <li>
-                    Helping <a href="https://www.benchmark.ai/">benchmark.ai</a>{" "}
-                    to become the main benchmark
-                </li>
-                <li>
-                    Collected over 2,800,000 human opinions on SVGs (
+                    Made the{" "}
+                    <a href="https://www.benchmark.ai/svg">SVG Benchmark</a> on{" "}
+                    <a href="https://www.benchmark.ai/">benchmark.ai</a> with
+                    3.2 million human annotations (
                     <a href="https://huggingface.co/datasets/Rapidata/svg-benchmark">
                         Hugging Face dataset
                     </a>
-                    ), my dataset has over 12,000 downloads
+                    ), 14,000+ downloads
+                </li>
+                <li>
+                    Authored a{" "}
+                    <a href="https://www.rapidata.ai/blog/rapidata-vs-prolific">
+                        Rapidata vs. Prolific study
+                    </a>{" "}
+                    that was organically shared with World Labs internal teams,
+                    showing equal label accuracy at 8× lower cost, based on a
+                    300-task, 18,000-answer experiment
+                </li>
+                <li>
+                    New customers had a hard time getting quality results, the
+                    UX/UI was too confusing. I built the home page (TypeScript,
+                    React) together with a guided tour that connected the UI to
+                    our Python SDK, so users could build up intuition about the
+                    app.
+                </li>
+                <li>
+                    Cut p95 latency of a production API 6.5× (1.25 s to 0.19 s)
+                    while traffic went up about 60%. Found an ORM query (C#,
+                    .NET) multiplying rows across three joins, fixed it with
+                    projection and split queries, and got it from 10.3 MB to
+                    332 KB per page.
+                </li>
+            </ul>
+
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    University of Tartu, Computer Science, Sep 2025 to Jun 2026.
+                    One year, then left to work full time at Rapidata.ai.
+                </li>
+                <li>
+                    <a href="https://kood.tech/">kood/Jõhvi</a>, coding school,
+                    Aug to Nov 2025
+                </li>
+                <li>
+                    Gustav Adolfi Gümnaasium, 2022 to 2025. Top national exam
+                    scores every year.
                 </li>
             </ul>
 
             <h2>Contact</h2>
             <ul>
+                <li>Tallinn, Estonia</li>
                 <li>
                     <a>elias[dot]tkri[at]gmail[dot]com</a>
                 </li>
