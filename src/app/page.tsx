@@ -51,11 +51,6 @@ export default function Home() {
                     songwriting/producing camps in South Korea, Norway,
                     Lithuania, Sweden and Estonia.
                 </li>
-                <li>
-                    <a href="https://www.dropbox.com/scl/fi/u1kpvit8dxqyujqytt9r9/TakeItSlow_CarmelEliasKillingEmily.wav?rlkey=834b1k9snw2mlhpdocegh0yom&st=28cnag2a&dl=0">
-                        My favorite song I&apos;ve produced
-                    </a>
-                </li>
             </ul>
 
             <h2>Cool first company I built in 11th grade</h2>
