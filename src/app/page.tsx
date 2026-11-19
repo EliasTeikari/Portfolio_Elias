@@ -11,8 +11,8 @@ export default function Home() {
                 height="201"
             />
             <p>
-                Hello hello! I&apos;m an Estonian 20 year old hustler and nice
-                guy.
+                Hello hello! I&apos;m a 20 y/o Estonian AI engineer &amp; music
+                producer.
             </p>
 
             <h2>TLDR</h2>
